@@ -13,7 +13,7 @@ var _multer = _interopRequireDefault(require("multer"));
 
 var _allModels = require("../../database/allModels");
 
-var _s = require("../../utils/s3");
+var _s = require("../../Utils/s3");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

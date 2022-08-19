@@ -8,9 +8,9 @@ var _helmet = _interopRequireDefault(require("helmet"));
 
 var _connections = _interopRequireDefault(require("./database/connections"));
 
-var _google = _interopRequireDefault(require("./config/google.config"));
+var _google = _interopRequireDefault(require("./Config/google.config"));
 
-var _route = _interopRequireDefault(require("./config/route.config"));
+var _route = _interopRequireDefault(require("./Config/route.config"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
@@ -46,16 +46,17 @@ zomato.use(session({
   secret: 'ssshhhhh'
 }));
 zomato.use(_passport["default"].initialize());
-zomato.use("/auth", _auth["default"]);
-zomato.use("/image", _image["default"]);
-zomato.use("/restaurent", _restaurent["default"]);
-zomato.use("/food", _food["default"]);
-zomato.use("/menu", _menu["default"]);
-zomato.use("/order", _order["default"]);
-zomato.use("/review", _review["default"]);
-zomato.use("/user", _user["default"]);
+zomato.use("/api/auth", _auth["default"]);
+zomato.use("/api/image", _image["default"]);
+zomato.use("/api/restaurent", _restaurent["default"]);
+zomato.use("/api/food", _food["default"]);
+zomato.use("/api/menu", _menu["default"]);
+zomato.use("/api/order", _order["default"]);
+zomato.use("/api/review", _review["default"]);
+zomato.use("/api/user", _user["default"]);
 zomato.use(_passport["default"].session());
-zomato.listen(4000, function () {
+var PORT = process.env.PORT || 4000;
+zomato.listen(PORT, function () {
   (0, _connections["default"])().then(function () {
     console.log("Server is running !!!");
   })["catch"](function (error) {

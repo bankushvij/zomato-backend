@@ -13,7 +13,7 @@ var _allmodels = require("../../Database/allmodels");
 
 var _passport = _interopRequireDefault(require("passport"));
 
-var _auth = require("../../validation/auth");
+var _auth = require("../../Validation/auth");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
