@@ -3,19 +3,19 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import ConnectDB from "./Database/connections.js";
-import googleAuthConfig from "./Config/google.config";
-import privateRouteConfig from "./Config/route.config";
+import googleAuthConfig from "./Config/google.config.js";
+import privateRouteConfig from "./Config/route.config,js";
 import passport from "passport";
 
 
-import Image from "./API/image";
-import auth from "./API/auth";
-import restaurents from "./API/restaurent";
-import food from "./API/food";
-import menu from "./API/menu";
-import review from "./API/review";
-import user from "./API/user";
-import order from "./API/order"
+import Image from "./API/image/index.js";
+import auth from "./API/auth/index.js";
+import restaurents from "./API/restaurent/index.js";
+import food from "./API/food/index.js";
+import menu from "./API/menu/index.js";
+import review from "./API/review/index.js";
+import user from "./API/user/index.js";
+import order from "./API/order/index.js";
 
 const session = require('express-session');
 googleAuthConfig(passport);
