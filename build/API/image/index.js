@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 
 var _multer = _interopRequireDefault(require("multer"));
 
-var _allmodels = require("../../database/allmodels");
+var _allmodels = require("../../database/allmodels.js");
 
 var _s = require("../../Utils/s3");
 
