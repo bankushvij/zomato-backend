@@ -44,7 +44,9 @@ zomato.use(passport.session());
 
 
 
-zomato.listen(4000, () => {
+const PORT=process.env.PORT||4000
+
+zomato.listen(PORT, () => {
     ConnectDB()
       .then(() => {
         console.log("Server is running !!!");
