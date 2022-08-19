@@ -5,7 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import ConnectDB from "./Database/connections.js";
 import googleAuthConfig from "./Config/google.config.js";
-import privateRouteConfig from "./Config/route.config,js";
+import privateRouteConfig from "./Config/route.config.js";
 import passport from "passport";
 
 

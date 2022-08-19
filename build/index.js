@@ -12,7 +12,7 @@ var _connections = _interopRequireDefault(require("./Database/connections.js"));
 
 var _googleConfig = _interopRequireDefault(require("./Config/google.config.js"));
 
-var _route = _interopRequireDefault(require("./Config/route.config,js"));
+var _routeConfig = _interopRequireDefault(require("./Config/route.config.js"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
@@ -39,7 +39,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _dotenv["default"].config();
 
 (0, _googleConfig["default"])(_passport["default"]);
-(0, _route["default"])(_passport["default"]);
+(0, _routeConfig["default"])(_passport["default"]);
 var zomato = (0, _express["default"])();
 zomato.use((0, _cors["default"])());
 zomato.use(_express["default"].json());
