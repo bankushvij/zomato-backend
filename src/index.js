@@ -1,4 +1,5 @@
-require("dotenv").config();
+import dotenv from 'dotenv'
+dotenv.config()
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -17,7 +18,7 @@ import review from "./API/review/index.js";
 import user from "./API/user/index.js";
 import order from "./API/order/index.js";
 
-const session = require('express-session');
+import session from 'express-session';
 googleAuthConfig(passport);
 privateRouteConfig(passport);
 

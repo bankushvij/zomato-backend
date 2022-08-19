@@ -1,5 +1,7 @@
 "use strict";
 
+var _dotenv = _interopRequireDefault(require("dotenv"));
+
 var _express = _interopRequireDefault(require("express"));
 
 var _cors = _interopRequireDefault(require("cors"));
@@ -30,11 +32,11 @@ var _index7 = _interopRequireDefault(require("./API/user/index.js"));
 
 var _index8 = _interopRequireDefault(require("./API/order/index.js"));
 
+var _expressSession = _interopRequireDefault(require("express-session"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-require("dotenv").config();
-
-var session = require('express-session');
+_dotenv["default"].config();
 
 (0, _googleConfig["default"])(_passport["default"]);
 (0, _route["default"])(_passport["default"]);
@@ -42,7 +44,7 @@ var zomato = (0, _express["default"])();
 zomato.use((0, _cors["default"])());
 zomato.use(_express["default"].json());
 zomato.use((0, _helmet["default"])());
-zomato.use(session({
+zomato.use((0, _expressSession["default"])({
   secret: 'ssshhhhh'
 }));
 zomato.use(_passport["default"].initialize());
