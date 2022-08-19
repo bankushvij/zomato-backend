@@ -4,7 +4,7 @@ import passport from "passport";
 import validateUser from "../../config/validateUser";
 
 // Database modal
-import { OrderModel } from "../../database/allmodels";
+import { OrderModel } from "../../Database/allmodels";
 const Router = express.Router();
 
 

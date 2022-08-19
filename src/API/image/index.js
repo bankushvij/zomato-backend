@@ -4,7 +4,7 @@ import multer from "multer";
 
 
 const Router = express.Router();
-import { ImageModel } from "../../database/allmodels.js";
+import { ImageModel } from "../../Database/allmodels.js";
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 

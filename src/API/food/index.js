@@ -1,7 +1,7 @@
 import express from "express";
 
 // Database modal
-import { FoodModel } from "../../database/allmodels";
+import { FoodModel } from "../../Database/allmodels";
 
 const Router = express.Router();
 
