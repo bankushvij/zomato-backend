@@ -10,9 +10,9 @@ var _helmet = _interopRequireDefault(require("helmet"));
 
 var _connections = _interopRequireDefault(require("./Database/connections.js"));
 
-var _googleConfig = _interopRequireDefault(require("./Config/google.config.js"));
+var _googleConfig = _interopRequireDefault(require("./config/google.config.js"));
 
-var _routeConfig = _interopRequireDefault(require("./Config/route.config.js"));
+var _routeConfig = _interopRequireDefault(require("./config/route.config.js"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
