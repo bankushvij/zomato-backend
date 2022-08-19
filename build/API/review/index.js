@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -33,7 +33,7 @@ Router.get("/:resid", /*#__PURE__*/function () {
             _context.prev = 0;
             resid = req.params.resid;
             _context.next = 4;
-            return _allModels.ReviewModel.find({
+            return _allmodels.ReviewModel.find({
               restaurants: resid
             });
 
@@ -84,7 +84,7 @@ Router["delete"]("/delete/:id", /*#__PURE__*/function () {
             _context2.prev = 0;
             _id = req.params._id;
             _context2.next = 4;
-            return _allModels.ReviewModel.findByIdAndDelete(_id);
+            return _allmodels.ReviewModel.findByIdAndDelete(_id);
 
           case 4:
             return _context2.abrupt("return", res.json({

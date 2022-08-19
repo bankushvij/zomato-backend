@@ -9,7 +9,7 @@ exports["default"] = void 0;
 
 var _express = _interopRequireDefault(require("express"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -32,7 +32,7 @@ Router.get("/:_id", /*#__PURE__*/function () {
             _context.prev = 0;
             _id = req.params._id;
             _context.next = 4;
-            return _allModels.FoodModel.findById(_id);
+            return _allmodels.FoodModel.findById(_id);
 
           case 4:
             foods = _context.sent;
@@ -81,7 +81,7 @@ Router.get("/r/:_id", /*#__PURE__*/function () {
             _context2.prev = 0;
             _id = req.params._id;
             _context2.next = 4;
-            return _allModels.FoodModel.find({
+            return _allmodels.FoodModel.find({
               restaurant: _id
             });
 
@@ -132,7 +132,7 @@ Router.get("/c/:category", /*#__PURE__*/function () {
             _context3.prev = 0;
             _category = req.params.category;
             _context3.next = 4;
-            return _allModels.FoodModel.find({
+            return _allmodels.FoodModel.find({
               category: {
                 $regex: _category,
                 $options: "i"

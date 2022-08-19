@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 
 var _multer = _interopRequireDefault(require("multer"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 var _s = require("../../Utils/s3");
 
@@ -53,7 +53,7 @@ Router.post("/", upload.single("file"), /*#__PURE__*/function () {
           case 5:
             uploadImage = _context.sent;
             _context.next = 8;
-            return _allModels.ImageModel.create({
+            return _allmodels.ImageModel.create({
               images: [{
                 location: uploadImage.Location
               }]
@@ -93,7 +93,7 @@ Router.get("/:_id", /*#__PURE__*/function () {
             _context2.prev = 0;
             _id = req.params._id;
             _context2.next = 4;
-            return _allModels.ImageModel.findById(_id);
+            return _allmodels.ImageModel.findById(_id);
 
           case 4:
             image = _context2.sent;

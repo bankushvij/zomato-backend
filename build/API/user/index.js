@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -72,7 +72,7 @@ Router.get("/:_id", /*#__PURE__*/function () {
             _context2.prev = 0;
             _id = req.params._id;
             _context2.next = 4;
-            return _allModels.UserModel.findById(_id);
+            return _allmodels.UserModel.findById(_id);
 
           case 4:
             getUser = _context2.sent;
@@ -124,7 +124,7 @@ Router.put("/update/:userId", /*#__PURE__*/function () {
             userId = req.params.userId;
             userData = req.body.userData;
             _context3.next = 5;
-            return _allModels.UserModel.findByIdAndUpdate(userId, {
+            return _allmodels.UserModel.findByIdAndUpdate(userId, {
               $set: userData
             }, {
               "new": true

@@ -13,7 +13,7 @@ var _passport = _interopRequireDefault(require("passport"));
 
 var _validateUser = _interopRequireDefault(require("../../config/validateUser"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -40,7 +40,7 @@ Router.get("/:_id", _passport["default"].authenticate("jwt"), /*#__PURE__*/funct
           case 3:
             _id = req.params._id;
             _context.next = 6;
-            return _allModels.OrderModel.findOne({
+            return _allmodels.OrderModel.findOne({
               user: _id
             });
 
@@ -92,7 +92,7 @@ Router.post("/new/:_id", _passport["default"].authenticate("jwt"), /*#__PURE__*/
             _id = req.params._id;
             orderDetails = req.body.orderDetails;
             _context2.next = 5;
-            return _allModels.OrderModel.findOneAndUpdate({
+            return _allmodels.OrderModel.findOneAndUpdate({
               user: _id
             }, {
               $push: {

@@ -2,7 +2,7 @@ import express from "express";
 import passport from "passport";
 
 // Database Model
-import { ReviewModel } from "../../database/allModels";
+import { ReviewModel } from "../../database/allmodels";
 
 const Router = express.Router();
 

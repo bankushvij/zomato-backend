@@ -9,7 +9,7 @@ exports["default"] = void 0;
 
 var _express = _interopRequireDefault(require("express"));
 
-var _allModels = require("../../database/allModels");
+var _allmodels = require("../../database/allmodels");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -32,7 +32,7 @@ Router.get("/list/:_id", /*#__PURE__*/function () {
             _context.prev = 0;
             _id = req.params._id;
             _context.next = 4;
-            return _allModels.MenuModel.findById(_id);
+            return _allmodels.MenuModel.findById(_id);
 
           case 4:
             menus = _context.sent;
@@ -77,7 +77,7 @@ Router.get("/image/:_id", /*#__PURE__*/function () {
             _context2.prev = 0;
             _id = req.params._id;
             _context2.next = 4;
-            return _allModels.ImageModel.findOne(_id);
+            return _allmodels.ImageModel.findOne(_id);
 
           case 4:
             menuImages = _context2.sent;
