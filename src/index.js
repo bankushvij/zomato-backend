@@ -2,7 +2,7 @@ require("dotenv").config();
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import ConnectDB from "./database/connections";
+import ConnectDB from "./Database/connections.js";
 import googleAuthConfig from "./Config/google.config";
 import privateRouteConfig from "./Config/route.config";
 import passport from "passport";
