@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 
 var _passport = _interopRequireDefault(require("passport"));
 
-var _validateUser = _interopRequireDefault(require("../../Config/validateUser"));
+var _validateUser = _interopRequireDefault(require("../../config/validateUser"));
 
 var _allModels = require("../../database/allModels");
 
