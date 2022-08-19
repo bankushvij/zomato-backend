@@ -1,7 +1,7 @@
 
 import express from "express";
 import passport from "passport";
-import validateUser from "../../config/validateUser";
+import validateUser from "../../Config/validateUser";
 
 // Database modal
 import { OrderModel } from "../../database/allModels";

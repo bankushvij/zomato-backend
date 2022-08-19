@@ -4,7 +4,7 @@ import passport from "passport";
 
 
 const Router = express.Router();
-import { ValidateSignin, ValidateSignup } from "../../validation/auth";
+import { ValidateSignin, ValidateSignup } from "../../Validation/auth";
 
 
 Router.post("/signup", async (req, res) => {

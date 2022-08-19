@@ -8,7 +8,7 @@ import { ImageModel } from "../../database/allModels";
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-import { s3Upload } from "../../utils/s3";
+import { s3Upload } from "../../Utils/s3";
 
 Router.post("/", upload.single("file"), async (req, res) => {
     try {

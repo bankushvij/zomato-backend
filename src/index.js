@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import ConnectDB from "./database/connections";
-import googleAuthConfig from "./config/google.config";
-import privateRouteConfig from "./config/route.config";
+import googleAuthConfig from "./Config/google.config";
+import privateRouteConfig from "./Config/route.config";
 import passport from "passport";
 
 
@@ -32,14 +32,14 @@ zomato.use(session({secret: 'ssshhhhh'}));
 zomato.use(passport.initialize());
 
 
-zomato.use("/auth",auth)
-zomato.use("/image",Image)
-zomato.use("/restaurent",restaurents)
-zomato.use("/food",food)
-zomato.use("/menu",menu);
-zomato.use("/order",order);
-zomato.use("/review",review);
-zomato.use("/user",user);
+zomato.use("/api/auth",auth)
+zomato.use("/api/image",Image)
+zomato.use("/api/restaurent",restaurents)
+zomato.use("/api/food",food)
+zomato.use("/api/menu",menu);
+zomato.use("/api/order",order);
+zomato.use("/api/review",review);
+zomato.use("/api/user",user);
 zomato.use(passport.session());
 
 
