@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _allmodels = require("../Database/allmodels");
+var _allmodels = require("../Database/allmodels.js");
 
 var _passportGoogleOauth = _interopRequireDefault(require("passport-google-oauth20"));
 

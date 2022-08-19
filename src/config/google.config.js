@@ -1,5 +1,5 @@
 
-import { UserModel } from "../Database/allmodels";
+import { UserModel } from "../Database/allmodels.js";
 import googleOAuth from "passport-google-oauth20";
 const GoogleStrategy = googleOAuth.Strategy;
 
